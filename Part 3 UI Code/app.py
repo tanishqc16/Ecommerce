@@ -36,6 +36,7 @@ def add_product():
 
 @app.route('/cart', methods=['GET'])
 def view_cart():
+    
     user_id = request.args.get('user_id')
     user_cart = cart.get(user_id, {})
     cart_items = []

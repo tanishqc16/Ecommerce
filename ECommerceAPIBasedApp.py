@@ -8,17 +8,54 @@ products = [
         'id': 1,
         'name': 'Mac Book Pro',
         'price': 45.55,
-        'description': 'Amazing laptop with awesome security'
+        'description': '15,6 inches laptop with awesome security'
+    },
+    {
+        'id': 2,
+        'name': 'Airpod Pro',
+        'price': 30,
+        'description': 'Wireless earphones with awesome sound quality'
+    },
+    {
+        'id': 3,
+        'name': 'BOAT',
+        'price': 100,
+        'description': 'Wired headphones with awesome sound quality'
+    },
+    {
+        'id': 4,
+        'name': 'Fastrack watch',
+        'price': 50,
+        'description': 'Analog watch which shows time'
     }
 ]
 
 # Temporary cart data stored in a Python dictionary for each user
 carts = {}
 
+# Route for searching products
+@app.route('/search_products', methods=['GET'])
+def search_products():
+    keyword = request.args.get('keyword')
+    if not keyword:
+        return jsonify({'error': 'Please provide the product name'}), 400
+
+    matching_products = []
+    for product in products:
+        if keyword.lower() in product['name'].lower():
+            matching_products.append(product)
+
+    if not matching_products:
+        return jsonify({'message': 'No match found'}), 404
+
+    return jsonify(matching_products)
+
+
+
 # Routes for handling different API endpoint
-app.route('/display_products', methods=['GET'])
+@app.route('/display_products', methods=['GET'])
 def get_products():
-    return jsonify(products)
+   return jsonify(products)
 
 @app.route('/display_product/<int:product_id>', methods=['GET'])
 def get_product(product_id):
@@ -41,7 +78,7 @@ def add_product():
         'description': data.get('description')
     }
     products.append(new_product)
-    return jsonify(new_product), 201
+    return jsonify({'products': products, 'new_product': new_product}), 201
 
 from flask import request, jsonify
 
