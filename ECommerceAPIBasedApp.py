@@ -23,7 +23,7 @@ products = [
         'description': 'Wired headphones with awesome sound quality'
     },
     {
-        'id': 4,
+        'id': 4,    
         'name': 'Fastrack watch',
         'price': 50,
         'description': 'Analog watch which shows time'

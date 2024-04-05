@@ -1,0 +1,695 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+body {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+  font-family: 'Poppins';
+  background-color: rgba(220, 218, 218, 0.319);
+  /* background-color: rgba(221, 52, 52, 0.319); */
+
+  color: black;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Global Styles */
+
+h1 {
+  font-size: 50px;
+  line-height: 64px;
+  color: rgb(0, 0, 0);
+}
+
+h2 {
+  font-size: 46px;
+  line-height: 54px;
+  color: black;
+}
+
+h4 {
+  font-size: 20px;
+  color: black;
+}
+
+h6 {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+p {
+  font-size: 16px;
+  color: black;
+  margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+  padding: 40px 80px;
+}
+
+.section-m1 {
+  margin: 40px 0;
+}
+
+body {
+  width: 100%;
+}
+
+/* CSS for navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 80px;
+  padding-bottom: 5px;
+  /* border: 1px solid #155e75; */
+  box-shadow: 0 5px 15px rgba(3, 131, 156, 0.06);
+  position: sticky;
+  left: 0;
+  top: 0;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-links li {
+   list-style: none;
+   padding: 0px 20px;
+   position: relative;
+}
+
+.nav-links li a {
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li {
+  color: #22d3ee;
+}
+
+.nav-links li a.active::after,
+.nav-links li a:hover::after{
+  content: "";
+  width: 30%;
+  height: 2px;
+  /* background: #22d3ee; */
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+
+#search-form {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+#search {
+  background-color: white;
+  width: 140px;
+  padding: 10px;
+  margin-right: 10px;
+  border: 0.1px solid #0891b2;
+  border-radius: 4px;
+  /* box-sizing: border-box; */
+  color: black;
+}
+
+#search:focus {
+  outline: none;
+}
+
+
+#search-form button{
+  padding: 10px 10px;
+  color: white;
+  border-radius: 10%;
+  background-color: #4f46e5;
+  /* border: 1px solid #155e75; */
+  cursor: pointer;
+}
+
+/* CSS for search results */
+#search-results {
+  list-style: none;
+  padding: 0;
+}
+
+#search-results li {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+
+.contanier-up {
+  display: flex;
+  align-items: center;
+  width: 800px;
+  margin-left: 300px;
+}
+
+/* CSS for Hero Section */
+#hero {
+  background-image: url("../img/Hero_Img.png");
+  height: 88vh;
+  width: 100%;
+  background-size: cover;
+  background-position: top 25% right 0;
+  padding: 0 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  color: white;
+}
+
+#hero h4{
+  padding-bottom: 15px;
+}
+
+#hero h1 {
+  color: yellow;
+}
+
+#hero .btn {
+  background-image: url("../img/button.png");
+  background-color: transparent;
+  text-decoration: none;
+  color: white;
+  border: 0;
+  padding: 14px 80px 14px 65px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+/* CSS for Feature Section */ 
+
+#feature{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#feature .fe-box {
+  width: 180px;
+  text-align: center;
+  padding: 25px 15px;
+  box-shadow: 20px 20px 34px rgba(6, 113, 142, 0.03);
+  border: 1px solid #155e75;
+  border-radius: 4px;
+  margin: 15px 0;
+}
+
+#feature .fe-box:hover{
+  box-shadow: 10px 10px 54px rgba(185, 199, 203, 0.03);
+}
+
+#feature .fe-box img{
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#feature .fe-box h6{
+  /* display: inline-block; */
+  padding: 9px 8px 6px 8px;
+  line-height: 1;
+  color: white;
+}
+
+/* CSS for image container */
+.image-container {
+  text-align: center; /* Align the image to the center */
+  margin-top: 20px; /* Add some top margin for spacing */
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.image-container img {
+  max-width: 100%; /* Ensure the image doesn't exceed the container width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Add border radius for rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  max-width: 100%;
+  height: auto;
+}
+
+.heading {
+  flex: 1;
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* CSS for footer */
+.footer {
+  color: #fff;
+  padding: 20px 10px;
+  text-align: center;
+}
+
+.footer p {
+  margin: 0;
+  padding-top: 10px;
+}
+
+.footer-line {
+  border: none;
+  border-top: 1px solid #155e75;
+  margin: 10px auto;
+  width: 100%;
+}
+
+.product-container {
+  width: 100%;
+  padding: 25px 15px;
+  background-color: rgba(220, 218, 218, 0.319);
+}
+
+.product {
+  max-width: 95%;
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  background-color: rgba(220, 218, 218, 0.319);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 10px;
+}
+
+.product-description {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.product-price {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+  padding-top: 8px;
+}
+
+.buy-button,
+.cart-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.buy-button {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.cart-button {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.buy-button:hover,
+.cart-button:hover {
+  background-color: #0056b3;
+}
+/* registration.css */
+
+/* Container styles */
+.registration-container, .login-container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #083344;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #155e75;
+}
+
+/* Heading styles */
+.registration-container h1 {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Form group styles */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Label styles */
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: white;
+}
+
+/* Input styles */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #5a808c;
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: white;
+}
+
+/* Button styles */
+.back-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}
+.login-container {
+  width: 300px;
+  margin: 100px auto;
+  text-align: center;
+}
+
+form {
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Additional CSS for product display */
+.product-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 30px 25px;
+  margin-bottom: 20px;
+  border: 1px solid #155e75;
+}
+
+.product-card h2 {
+  /* margin: 9px 8px 6px 8px; */
+  color: black;
+  font-size: 25px;
+}
+
+.product-card .product-description {
+  /* margin: 9px 8px 6px 8px; */
+  color: rgb(173, 170, 170);
+  font-size: 16px;
+}
+
+.product-card .product-price {
+  font-size: 12px;
+  color: black;
+}
+
+/* .product-card .button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} */
+
+.product-card button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.product-card .buy-button {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.product-card .cart-button {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.product-card button:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Manjari');
+
+
+  /* navbar and welcome screen */
+.container-fluid{
+    background-color: rgba(220, 218, 218, 0.319);
+}
+
+.container-fluid a{
+    color:rgb(255, 0, 0);
+    font-weight: 900;
+    font-family: 'Poppins';
+    font-size: 30px;
+    letter-spacing: 2px;
+    padding-left: 5px;
+    padding-right: 30px;
+}
+.container-fluid a:hover{
+    color: rgb(255, 0, 0);
+}
+#navbarScroll a{
+    color: rgb(0, 0, 0);
+    font-weight: 100;
+    font-size: 20px;
+}
+#navbarScroll a:hover{
+    color: rgb(255, 0, 0);
+    font-size: 21px;
+}
+.intro_area{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: rgb(162, 222, 255);
+    /* background-color: rgb(47, 47, 47); */
+
+}
+
+.quotetxt{
+    text-align: right;
+    padding-right: 25%;
+    padding-top: 150px;
+    list-style: none;
+    font-family: 'Raleway';
+    font-size: 70px;
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+}
+
+.nav-link{
+    cursor: pointer;
+}
+/* collections */
+.collection h1{
+    text-align: center;
+    font-family: 'Poppins';
+    padding-top: 20px;
+    font-size: 30px;
+    letter-spacing: 2px;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+}
+    
+.coll {
+    font-size: 60px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    text-decoration: none;
+    background: linear-gradient(to right, rgb(0, 0, 0) 30%, #FF5858 50%, #ff0000);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 1s ease-out;
+    font-family: montserrat, sans-serif;
+
+}
+
+.coll:hover {
+    background-position: -100%;
+}
+
+/* collections cards */
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Poppins', sans-serif; */
+}
+
+.add-cart{
+    position: absolute;
+    bottom: 8%;
+    right: 2%;
+    background: black;
+    color:white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10%;
+}
+.add-cart:hover{
+    bottom: 9%;
+}
+
+/* allcards */
+.collection-list{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    z-index: 1;
+    background: rgba(166, 166, 166, 0);
+    padding-bottom: 20px;
+}
+
+/* container */
+.col{
+    padding: 20px;
+    padding-bottom: 50px;
+}
+
+/* cards */
+.text-center{
+    position: relative;
+    width: 280px;
+    height: 410px;
+    margin-left: 8%;
+    margin-right: 5%;
+    padding: 10px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    justify-content: center;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+
+/* footer */
+*{
+    font-family:'Poppins';
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.footer-container{
+    background-color: #010c2a;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    width:100%;
+}
+.footer-row-1{   
+    display: flex;
+    flex-direction: row;
+} 
+
+.copyright{
+    color:rgba(151, 151, 151, 0.822);
+    height: min-content;
+    padding-left: 3%;
+}
+.footer-row-1 .links li a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+.footer-row-1 .links li a:hover{
+    color:rgb(255, 0, 0);
+    text-decoration: none;
+    font-size: 21px;
+    letter-spacing: 2px;
+
+}
+
+.footer {
+    color: white;
+    flex-wrap: wrap;
+    background-color: #010c2a;
+    justify-content: space-between;
+    width:90%;
+    height: min-content;
+    margin: 0 auto;  
+}
+
+@media screen and (max-width:750px) {
+    
+    .footer-row-1{
+        display: flex;
+        flex-direction: column;
+        height: 80%;
+    }
+    .footer-row-1 .column{
+        width: 90%;
+      } 
+
+    }
+
+

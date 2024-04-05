@@ -34,6 +34,25 @@ def add_product():
     products.append(new_product)
     return jsonify(new_product), 201
 
+# Search route to search for products based on a keyword
+@app.route('/search_products', methods=['GET'])
+def search_products():
+    keyword = request.args.get('keyword')
+    if not keyword:
+        return jsonify({'error': 'Please provide a keyword to search for'}), 400
+
+    # Search for products containing the keyword in their name or description
+    matching_products = []
+    for product in products:
+        if keyword.lower() in product['name'].lower() or keyword.lower() in product['description'].lower():
+            matching_products.append(product)
+
+    if not matching_products:
+        return jsonify({'message': 'No products found matching the keyword'}), 404
+
+    return jsonify(matching_products)
+
+
 @app.route('/cart', methods=['GET'])
 def view_cart():
     

@@ -1,0 +1,159 @@
+***************ECOMMERCE WEBSITE***************
+
+	Table of Contents
+
+Introductory Chapter	
+Introduction	
+Scope	
+Specific Requirements	
+Functional Requirements	
+  Login / Registration
+  Add to Cart
+  Receive Order
+  Managing products
+  Managing accounts
+Database Requirements	
+Non- Functional Requirements	
+   Security
+   Maintainability
+   Reliability
+   Safety Requirements
+Use Case
+   Buyer
+   Seller
+Conclusion	
+References	
+
+ 1	Introduction
+
+Introduction
+An e-commerce website is like an online store where you can buy and sell things. 
+It's a place on the internet where businesses and customers meet to do shopping electronically. 
+Instead of going to a physical store, you use your computer or phone to browse through products, 
+pick what you want, and then make a purchase online.
+
+Scope	
+We want to create a website called the E-Commerce website that acts like an online store for 
+Electronics. This website will let people buy their gadgets without going to a physical store. 
+You can easily pick what you need from the website, and the products will be delivered to your doorstep. 
+The main goals are to make shopping convenient, provide home delivery, and have tools to analyze sales 
+for better business profits. The things the website must do (functional) and the way it should work 
+(non-functional) are all written in this document.
+
+2	Specific Requirements
+
+2.1 Functional Requirement
+
+2.1.1	Login / Signup
+Users, whether new or returning, can easily register on our online platform with their credentials for login 
+convenience, and once registered, they can log in by entering their credentials.
+
+2.1.2	Add to Cart
+Users have the flexibility to explore, add, or remove products in their cart, which serves as a convenient 
+tool for tracking their selected items on our platform.
+	
+2.1.3	Receive Order
+Upon the customer's order confirmation, the order is duly received and processed.
+	
+2.1.4	Managing products
+Sellers have the capability to add, edit, or delete products by efficiently managing their inventory.
+
+2.1.5	Managing accounts
+The administrator, seller, and user have the capability to modify their profile details seamlessly
+on the platform.
+
+2.2 Database Requirements
+
+- MongoDB for Data Storage:
+  - Utilization of MongoDB as the NoSQL database.
+  - Regular backups to prevent data loss.
+
+Profile: 
+ - Database of all the users accessing the system that includes their information like email id, 
+password, phone number and other details
+
+Order: 
+ - It is the database of all the order the site or the administrator has
+
+Shopping Cart: 
+ - Contains the products that the customer is planning to purchase. Entities can be added to or removed from the cart.
+
+Product Database: 
+ - The database will contain information regarding 
+product availability, stock etc.
+
+2.3 Non-Functional Requirements
+	
+2.3.3	Security Requirement: Implement robust encryption and authentication measures to ensure the confidentiality and integrity of user data in the e-commerce platform.
+
+2.3.2	Maintainability Requirement: The e-commerce system should have clear documentation and modular design to facilitate easy updates and modifications, ensuring long-term maintainability.
+
+2.3.3	Reliability Requirement: The platform must have a robust infrastructure and failover mechanisms to guarantee high availability and reliability, minimizing downtime for users.
+
+2.3.4	Safety Requirement: Ensure secure payment gateways and adherence to industry safety standards to safeguard user financial information and transactions on the e-commerce platform.
+
+3	Specific Requirements
+
+3.1	Buyer:
+Product Exploration:
+ - Search and compare electronic devices.
+ - Read reviews and specifications.
+Order Placement:
+ - Add items to the cart and check out securely.
+Product Assistance:
+ - Access detailed product information.
+ - Seek customer support for inquiries.
+Warranty and Returns:
+ - Register for product warranty.
+ - Initiate easy returns or exchanges.
+
+3.2	Seller:
+Product Listing:
+ - Create detailed product listings.
+ - Manage inventory effectively.
+Order Fulfillment:
+ - Process orders accurately and promptly.
+ - Provide various shipping options.
+Customer Engagement:
+ - Run promotions and discounts.
+ - Engage customers through newsletters.
+After-Sales Service:
+ - Offer technical support.
+ - Provide updates on products and features.
+
+4. External Interface Specification
+
+4.1 User-Friendly Look
+
+- Easy to Fit Any Screen:
+ - Looks good on different devices, thanks to tools like Bootstrap or Flexbox.
+ - Easy for both users and admins to find their way around.
+
+4.2 Safe Talking
+
+- Keep Data Safe with HTTPS:
+
+ - Make sure the info going back and forth is encrypted.
+ - Confirm a secure connection with SSL certificates.
+
+- Talking to Servers in a Simple Way:
+
+ - Design how the website talks to servers in an easy-to-understand way.
+ - Write down the rules for how to ask for things and what to expect back.
+
+4.3 Talking to Different Machines
+
+- Friends with Most Browsers:
+ - Works well with popular browsers like Chrome, Firefox, Safari, and Edge.
+
+- Phone-Friendly Talking:
+ - Looks good and works well on phones and other small screens.
+
+4.4 Safe Storage Space
+
+- Storing Data with MongoDB:
+ - Uses MongoDB to store info in a flexible way.
+ - Regularly saves a copy to avoid losing anything important.
+
+5	Conclusion
+6	References
