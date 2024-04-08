@@ -59,7 +59,7 @@ Upon the customer's order confirmation, the order is duly received and processed
 Sellers have the capability to add, edit, or delete products by efficiently managing their inventory.
 
 2.1.5	Managing accounts
-The administrator, seller, and user have the capability to modify their profile details seamlessly
+The administrator, seller, and admin have the capability to modify their product details and add products seamlessly
 on the platform.
 
 2.2 Database Requirements
@@ -91,6 +91,27 @@ product availability, stock etc.
 2.3.3	Reliability Requirement: The platform must have a robust infrastructure and failover mechanisms to guarantee high availability and reliability, minimizing downtime for users.
 
 2.3.4	Safety Requirement: Ensure secure payment gateways and adherence to industry safety standards to safeguard user financial information and transactions on the e-commerce platform.
+
+2.4 Technology Used
+
+- Frontend (HTML & CSS):
+ - Create HTML templates for different pages of your e-commerce website (e.g., home page, product listing page, product detail page, cart page, checkout page, etc.).
+ - Use CSS to style these HTML templates to ensure a visually appealing and responsive design.
+
+- Backend (Flask):
+ - Set up a Flask application to handle routing and request handling.
+ - Define routes for different functionalities such as displaying product listings, handling user authentication and authorization, managing shopping cart, processing orders, etc.
+ - Integrate Flask with MongoDB to perform database operations (CRUD operations) such as retrieving product information, storing user data, updating orders, etc.
+
+- Database (MongoDB):
+ - Design and create MongoDB collections to store data related to your e-commerce application (e.g., products, users, orders, etc.).
+ - Use PyMongo (the official MongoDB driver for Python) to interact with MongoDB from your Flask application. This includes querying the database to retrieve and manipulate data as needed by your application.
+
+- Advantage of HTML/CSS/Flask/MongoDB:
+ - Simplicity: This stack offers a straightforward setup for developers comfortable with Python. Flask provides a simple backend framework, and MongoDB allows flexible data modeling.
+ - Full-Stack with Python: Ideal for maintaining consistency with Python across frontend (Flask templates) and backend (Flask server) development.
+ - Flexibility: MongoDB's NoSQL design is adaptable for evolving data needs, suitable for smaller-scale projects or unique requirements.
+ - Scalability: MongoDB supports horizontal scaling, beneficial for accommodating growth in data volume and complexity.
 
 3	Specific Requirements
 
