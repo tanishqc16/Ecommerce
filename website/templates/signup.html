@@ -46,14 +46,15 @@
       <li><a class="active" href="/home?user_id={{ user_id }}">Home</a></li>
       <li><a class="active" href="/?user_id={{ user_id }}">Products</a></li>
       {% if not user_id %}
-      <li><a href="/signin">Sign In</a></li>
-      <li><a href="/signup">Signup</a></li>
-      {% else %}
-      <li><a href="/carts?user_id={{ user_id }}">Cart</a></li>
-      <li><a href="/profile?user_id={{ user_id }}">User</a></li>
-      <li><a href="/logout">Logout</a></li>
-
-      {% endif %}
+          <li><a href="/signin">Sign In</a></li>
+         <li><a href="/signup">Signup</a></li>
+        {% else %}
+          {% if user_id == "661955e817460579f05fc06d" %}
+          <li><a href="/admin/addProduct?user_id={{ user_id }}">Admin</a></li>
+         {% endif %}
+          <li><a href="/carts?user_id={{ user_id }}">Cart</a></li>
+          <li><a href="/logout">Logout</a></li>
+        {% endif %}
     </ul>
     <form id="search-form">
       <input type="text" id="search" name="search" placeholder="Search for products" required />

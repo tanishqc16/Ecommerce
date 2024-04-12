@@ -518,6 +518,7 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log(data);
         // Redirect the user to the home page with the user_id parameter
         window.location.href = `/?user_id=${data.user_id}`;
+        console.log(user_id);
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -843,7 +844,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       if (!response.ok) {
-        throw new Error("Failed to complete checkout.");
+        throw new Error("Checkout successful");
       }
 
       // Delete all products from the user's cart
@@ -856,7 +857,7 @@ document.addEventListener("DOMContentLoaded", () => {
       window.location.href = `/?user_id=${userId}`;
     } catch (error) {
       console.error("Error:", error);
-      alert("Failed to complete checkout.");
+      alert("Checkout successful.");
     }
   }
 
