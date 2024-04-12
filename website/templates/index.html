@@ -9,6 +9,8 @@
       rel="stylesheet"
       href="{{ url_for('static', filename='css/style.css') }}"
     />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> -->
 
   </head>
@@ -55,9 +57,11 @@
           <p class="product-price">Price: ${{ product.price }}</p>
           <div class="button-container">
             <button class="buy-button">Buy</button>
-            <button class="cart-button" data-product-id="{{ product._id }}">
+            <!-- <button class="cart-button" data-product-id="{{ product._id }}">
               Add to Cart
-            </button>
+            </button> -->
+            <i class='bx bx-shopping-bag cart-button' data-product-id="{{ product._id }}"></i>
+
           </div>
         </div>
         {% endfor %}
@@ -66,6 +70,44 @@
       <p class="error-message">Product not found</p>
       {% endif %}
     </div>
+    <!-- footer -->
+    <div class="footer-container">
+      <div class="footer">
+        <div class="footer-row-1" style="padding-top: 2% ;">
+          <div class="column 1" style="padding-left:5%;">
+            <h3 style="font-weight: 600; font-size: 30px; padding-bottom: 15%;">Quick Links</h3>
+              <ui class="links" style="list-style:'';">
+               <li style="padding:'1% 4%'; margin-left:'4%';">- <a href="/" style="color:'white';">Home</a></li>
+               <li style="padding:'1% 4%'; margin-left:'4%';">- <a href="/?user_id={{ user_id }}" style="color:'white';">Products</a></li>
+               <li style="padding:'1% 4%'; margin-left:'4%';">- <a href="/carts?user_id={{ user_id }}" style="color:'white';">Cart</a></li>
+               </ui>
+          </div>
+          <div class="column 2">
+            <h3 style="padding-left: 30%; font-weight: 600; font-size: 30px;">Get In Touch</h3>
+              <ul class="information" style="padding-left: 30%;">
+              <span> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                </svg> </span>
+                  <span>Survey No. 3/4, Kondhwa (Budruk)
+                   Pune – 411048, Maharashtra (India)<br></br>
+                  </span>
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                </svg></span>
+                <span> Phone: 123456789 <br></br></span>
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                </svg></span>
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                 <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+                 </svg> </span>
+                <span> Email us : tanishqbc16@gmail <br></br></span>
+                <span style="color:'rgb(151, 151, 151)';">Feel free to write us about your Experiences and Suggestions</span>
+              </ul>
+            </div>
+        </div>
+        </div>
+      </div>
 
   </body>
 </html>

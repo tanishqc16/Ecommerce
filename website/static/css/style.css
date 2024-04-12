@@ -325,17 +325,17 @@ body {
 
 .buy-button {
   background-color: #007bff;
-  color: #fff;
+  color: #000000;
 }
 
 .cart-button {
-  background-color: #28a745;
-  color: #fff;
+  background-color: #6e8a75;
+  color: #000000;
 }
 
 .buy-button:hover,
 .cart-button:hover {
-  background-color: #0056b3;
+  background-color: #7ba0c8;
 }
 /* registration.css */
 
@@ -344,10 +344,10 @@ body {
   max-width: 500px;
   margin: 50px auto;
   padding: 20px;
-  background-color: #083344;
+  background-color: rgba(147, 147, 147, 0.319);
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border: 1px solid #155e75;
+  /* border: 1px solid #155e75; */
 }
 
 /* Heading styles */
@@ -360,6 +360,7 @@ body {
 /* Form group styles */
 .form-group {
   margin-bottom: 20px;
+  color: black;
 }
 
 /* Label styles */
@@ -367,7 +368,7 @@ body {
   display: block;
   font-weight: bold;
   margin-bottom: 5px;
-  color: white;
+  color: black;
 }
 
 /* Input styles */
@@ -379,7 +380,7 @@ body {
   border: 1px solid #5a808c;
   border-radius: 5px;
   box-sizing: border-box;
-  color: white;
+  color: black;
 }
 
 /* Button styles */
@@ -387,7 +388,7 @@ body {
   display: inline-block;
   padding: 10px 20px;
   margin-top: 20px;
-  background-color: #007bff;
+  background-color: #000000;
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
@@ -433,6 +434,14 @@ input {
   margin-bottom: 20px;
   border: 1px solid #155e75;
 }
+.product-card:hover {
+  background-color: rgb(237, 237, 237);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 31px 26px;
+  margin-bottom: 20px;
+  border: 1px solid #155e75;
+}
 
 .product-card h2 {
   /* margin: 9px 8px 6px 8px; */
@@ -469,10 +478,11 @@ input {
 .product-card .buy-button {
   background-color: #007bff;
   color: #fff;
+  padding-top: 2px;
 }
 
 .product-card .cart-button {
-  background-color: #28a745;
+  background-color: #000000;
   color: #fff;
 }
 
